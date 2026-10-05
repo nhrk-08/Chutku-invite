@@ -25,11 +25,11 @@ const lb=document.createElement('div');lb.className='lb';lb.innerHTML='<img><div
 lb.onclick=()=>lb.classList.remove('on');
 function show(src,cap){lb.querySelector('img').src=src;lb.querySelector('div').textContent=cap;lb.classList.add('on')}
 PH.forEach(([k,c])=>{const p=document.createElement('div');p.className='patch';
- p.style.backgroundImage=`url(images/${k}.jpg)`;p.innerHTML=`<span>${c}</span>`;
- p.onclick=()=>show(`images/${k}.jpg`,c);$('#quilt').append(p)});
-$('#corner').style.backgroundImage='url(images/hand.jpg)';
+ p.style.backgroundImage=`url(${k}.jpg)`;p.innerHTML=`<span>${c}</span>`;
+ p.onclick=()=>show(`${k}.jpg`,c);$('#quilt').append(p)});
+$('#corner').style.backgroundImage='url(hand.jpg)';
 $('#corner').textContent='';
-$('#corner').onclick=()=>show('images/hand.jpg',"Chutku's little hand ✋");
+$('#corner').onclick=()=>show('hand.jpg',"Chutku's little hand ✋");
 /* balloons */
 const W=["Neharika, 18 looks stunning on you. Shine like you always do! ✨","Chutku, may your giggles never stop, tiny queen! 👑","To two sisters: the best gift is each other 💕","May this new chapter be your brightest yet 🌸","Mundan day blessings: may Chutku grow strong, wise and happy 🙏","Eighteen! The world is ready for you, Neharika 🌍","Three years of chaos, cuteness and cake! 🎂","Come hungry, leave happy. See you at Meerav! 🍽️"];
 const cols=['#e58a9b','#e8b04a','#9bd1c4','#b79be0'];let popped=0;
